@@ -20,7 +20,6 @@ class Show extends Component {
   async componentDidUpdate() {
     const { showId, data } = this.state;
     if (showId !== '' && data === null) {
-      console.log(1);
       const data = await getShowInfo(this.props.showId);
       this.setState({ data });
     }
